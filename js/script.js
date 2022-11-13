@@ -1,5 +1,5 @@
 {
-  function playGame(playerInput) {
+  const playGame = function (playerInput) {
     clearMessages();
     function getMoveName(argMoveId) {
       if (argMoveId == 1) {
@@ -13,8 +13,7 @@
         return 'nieznany ruch';
       }
     }
-
-    function displayResult(argComputerMove, argPlayerMove) {
+    const displayResult = function (argComputerMove, argPlayerMove) {
       printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
       if (
@@ -34,7 +33,7 @@
       } else {
         printMessage('Kamień, papier lub nożyce - więcej opcji nie ma');
       }
-    }
+    };
     // odczytanie ruchu komputera
     const randomNumber = Math.floor(Math.random() * 3 + 1);
     printMessage('Wylosowana liczba to: ' + randomNumber);
@@ -53,7 +52,7 @@
     // Zwrócenie wyniku
 
     displayResult(argComputerMove, argPlayerMove);
-  }
+  };
   document.getElementById('play-rock').addEventListener('click', function () {
     playGame(1)('Zagrałeś kamień!');
   });
