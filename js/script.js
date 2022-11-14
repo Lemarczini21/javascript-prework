@@ -54,16 +54,16 @@
     displayResult(argComputerMove, argPlayerMove);
   };
   document.getElementById('play-rock').addEventListener('click', function () {
-    playGame(1)('Zagrałeś kamień!');
+    playGame(1);
   });
 
   document.getElementById('play-paper').addEventListener('click', function () {
-    playGame(2)('Zagrałeś papier!');
+    playGame(2);
   });
 
   document
     .getElementById('play-scissors')
     .addEventListener('click', function () {
-      playGame(3)('Zagrałeś nożyce!');
+      playGame(3);
     });
 }
